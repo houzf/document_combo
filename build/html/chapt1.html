@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Introduction &mdash; COMBO 0.1a documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="COMBO 0.1a documentation" href="index.html"/>
+        <link rel="next" title="2. Methodology" href="chapt2.html"/>
+        <link rel="prev" title="Welcome to COMBO’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> COMBO
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1a
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-help">1.1. Getting Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#citation">1.2. Citation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#credits">1.3. Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#licence">1.4. Licence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references">1.5. References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapt2.html">2. Methodology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapt3.html">3. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapt4.html">4. Code Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapt5.html">5. Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">COMBO</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>1. Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/chapt1.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>COMmon Bayesian Optimization Library (COMBO)</p>
+<p>Bayesian optimization <a class="reference internal" href="#mockus1974pitc" id="id1">[Moc74]</a> has been proven as an effective tool in accelerating scientific discovery. A standard implementation (e.g., <a class="reference external" href="http://scikit-learn.org/">scikit-learn</a>), however, can accommodate only small training data. COMBO <a class="reference internal" href="#ueno2016md" id="id2">[URH+16]</a> is highly scalable due to an efficient protocol that employs Thompson sampling <a class="reference internal" href="#chapelle2011nips" id="id3">[CL11]</a>, random feature maps <a class="reference internal" href="#rahimi07randomfeatures" id="id4">[RR08]</a>, one-rank Cholesky update <a class="reference internal" href="#gill1972mc" id="id5">[GGMS72]</a> and automatic hyperparameter tuning <a class="reference internal" href="#rasmussen2006book" id="id6">[CER06]</a>.</p>
+<div class="section" id="getting-help">
+<h2>1.1. Getting Help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h2>
+<p>The latest version of COMBO and documentation can always be found at <a class="reference external" href="https://github.com/tsudalab/combo">https://github.com/tsudalab/combo</a>.</p>
+</div>
+<div class="section" id="citation">
+<h2>1.2. Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h2>
+<p>We ask that you acknowledge the use of COMBO in any publications arising from the use of this
+code through the following reference</p>
+<p>[ref] Tsuyoshi Ueno, Trevor David Rhone, Zhufeng Hou, Teruyasu Mizoguchi and Koji Tsuda,
+COMBO: An Efficient Bayesian Optimization Library for Materials Science,
+Materials Discovery, (2016), in press. Available from <a class="reference external" href="http://dx.doi.org/10.1016/j.md.2016.04.001">http://dx.doi.org/10.1016/j.md.2016.04.001</a></p>
+<p>Bibtex file for citing COMBO</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@article</span><span class="p">{</span><span class="n">Ueno2016</span><span class="p">,</span>
+<span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;COMBO: An Efficient Bayesian Optimization Library for Materials Science &quot;</span><span class="p">,</span>
+<span class="n">journal</span> <span class="o">=</span> <span class="s2">&quot;Materials Discovery&quot;</span><span class="p">,</span>
+<span class="n">volume</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="n">number</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="n">pages</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span>
+<span class="n">year</span> <span class="o">=</span> <span class="s2">&quot;2016&quot;</span><span class="p">,</span>
+<span class="n">note</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="n">doi</span> <span class="o">=</span> <span class="s2">&quot;http://dx.doi.org/10.1016/j.md.2016.04.001&quot;</span><span class="p">,</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://www.sciencedirect.com/science/article/pii/S2352924516300035&quot;</span><span class="p">,</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s2">&quot;Tsuyoshi Ueno and Trevor David Rhone and Zhufeng Hou and Teruyasu Mizoguchi and Koji Tsuda&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="credits">
+<h2>1.3. Credits<a class="headerlink" href="#credits" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="licence">
+<h2>1.4. Licence<a class="headerlink" href="#licence" title="Permalink to this headline">¶</a></h2>
+<p>This package is distributed under the <a class="reference external" href="https://en.wikipedia.org/wiki/MIT_License">MIT License</a>.</p>
+<p><a class="reference external" href="https://opensource.org/licenses/MIT">The MIT License (MIT)</a>.</p>
+<p>Copyright (c) &lt;2015-&gt; &lt;<a class="reference external" href="http://www.tsudalab.org/">Tsuda Laboratory</a>&gt;</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &#8220;Software&#8221;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED &#8220;AS IS&#8221;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+</div>
+<div class="section" id="references">
+<h2>1.5. References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="bibtex-bibliography-chapt1-0"><table class="docutils citation" frame="void" id="rasmussen2006book" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id6">[CER06]</a></td><td>Christopher K. I.&nbsp;Williams Carl Edward&nbsp;Rasmussen. <em>Gaussian Processes for Machine Learning</em>. volume of Adaptive computation and machine learning. MIT Press, edition, 2006. URL: <a class="reference external" href="http://www.gaussianprocess.org/gpml/">http://www.gaussianprocess.org/gpml/</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="chapelle2011nips" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[CL11]</a></td><td>Olivier Chapelle and Lihong Li. An empirical evaluation of thompson sampling. In J.&nbsp;Shawe-Taylor, R.&nbsp;S. Zemel, P.&nbsp;L. Bartlett, F.&nbsp;Pereira, and K.&nbsp;Q. Weinberger, editors, <em>Advances in Neural Information Processing Systems 24</em>, pages 2249–2257. Curran Associates, Inc., 2011. URL: <a class="reference external" href="http://papers.nips.cc/paper/4321-an-empirical-evaluation-of-thompson-sampling.pdf">http://papers.nips.cc/paper/4321-an-empirical-evaluation-of-thompson-sampling.pdf</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gill1972mc" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[GGMS72]</a></td><td>Phillip&nbsp;E. Gill, Gene&nbsp;H. Golub, Walter&nbsp;A. Murray, and Michael&nbsp;A. Saunders. Methods for modifying matrix factorizations. <em>Math. Comp.</em>, 28:505–535, 1972. URL: <a class="reference external" href="http://www.ams.org/journals/mcom/1974-28-126/S0025-5718-1974-0343558-6/">http://www.ams.org/journals/mcom/1974-28-126/S0025-5718-1974-0343558-6/</a>, <a class="reference external" href="http://dx.doi.org/http://dx.doi.org/10.1090/S0025-5718-1974-0343558-6">doi:http://dx.doi.org/10.1090/S0025-5718-1974-0343558-6</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mockus1974pitc" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[Moc74]</a></td><td>Jonas Mockus. On bayesian methods for seeking the extremum. In <em>Proceedings of the IFIP Technical Conference</em>, 400–404. London, UK, UK, 1974. Springer-Verlag. URL: <a class="reference external" href="http://dl.acm.org/citation.cfm?id=646296.687872">http://dl.acm.org/citation.cfm?id=646296.687872</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="rahimi07randomfeatures" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[RR08]</a></td><td>Ali Rahimi and Benjamin Recht. Random features for large-scale kernel machines. In J.&nbsp;C. Platt, D.&nbsp;Koller, Y.&nbsp;Singer, and S.&nbsp;T. Roweis, editors, <em>Advances in Neural Information Processing Systems 20</em>, 1177–1184. Curran Associates, Inc., 2008. URL: <a class="reference external" href="http://papers.nips.cc/paper/3182-random-features-for-large-scale-kernel-machines.pdf">http://papers.nips.cc/paper/3182-random-features-for-large-scale-kernel-machines.pdf</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="ueno2016md" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[URH+16]</a></td><td>Tsuyoshi Ueno, Trevor&nbsp;David Rhone, Zhufeng Hou, Teruyasu Mizoguchi, and Koji Tsuda. Combo: an efficient bayesian optimization library for materials science. <em>Materials Discovery</em>, ():–, 2016. URL: <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S2352924516300035">http://www.sciencedirect.com/science/article/pii/S2352924516300035</a>, <a class="reference external" href="http://dx.doi.org/http://dx.doi.org/10.1016/j.md.2016.04.001">doi:http://dx.doi.org/10.1016/j.md.2016.04.001</a>.</td></tr>
+</tbody>
+</table>
+</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chapt2.html" class="btn btn-neutral float-right" title="2. Methodology" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to COMBO’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Tsuda Laboratory.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1a',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
