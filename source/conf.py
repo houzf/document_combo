@@ -213,7 +213,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('index', 'combo.tex', u'combo Documentation',
-   u'zh', 'manual'),
+   u'Tsuda Laboratory', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -243,7 +243,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'combo', u'combo Documentation',
-     [u'zh'], 1)
+     [u'Tsuda Laboratory'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -257,7 +257,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'combo', u'combo Documentation',
-   u'zh', 'combo', 'One line description of project.',
+   u'Tsuda Laboratory', 'combo', 'One line description of project.',
    'Miscellaneous'),
 ]
 

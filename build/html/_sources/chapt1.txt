@@ -4,6 +4,7 @@ COMmon Bayesian Optimization Library (COMBO)
 
 Bayesian optimization :cite:`Mockus1974pitc` has been proven as an effective tool in accelerating scientific discovery. A standard implementation (e.g., `scikit-learn <http://scikit-learn.org/>`_), however, can accommodate only small training data. COMBO :cite:`Ueno2016md` is highly scalable due to an efficient protocol that employs Thompson sampling :cite:`Chapelle2011nips`, random feature maps :cite:`Rahimi07randomfeatures`, one-rank Cholesky update :cite:`Gill1972mc` and automatic hyperparameter tuning :cite:`Rasmussen2006book`.
 
+
 Getting Help
 ----------------------
 The latest version of COMBO and documentation can always be found at https://github.com/tsudalab/combo.
@@ -53,3 +54,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 References
 ----------------------
 .. bibliography:: references.bib
+
