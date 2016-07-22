@@ -1,4 +1,2 @@
-##
-## sphinxcontrib-bibtex 
 sphinxcontrib-bibtex
 sphinxcontrib-inlinesyntaxhighlight
