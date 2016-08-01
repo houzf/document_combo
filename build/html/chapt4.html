@@ -88,6 +88,10 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">4. Code Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#modules-in-combo">4.1. Modules in COMBO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#structure-of-combo">4.2. Structure of COMBO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#classes-and-functions-in-combo">4.3. Classes and functions in COMBO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#variable-object">4.3.1. variable object</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapt5.html">5. Tutorials</a></li>
@@ -233,6 +237,1520 @@
 |   `-- utility.py
 `-- variable.py
 </pre></div>
+</div>
+</div>
+<div class="section" id="classes-and-functions-in-combo">
+<h2>4.3. Classes and functions in COMBO<a class="headerlink" href="#classes-and-functions-in-combo" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="variable-object">
+<h3>4.3.1. variable object<a class="headerlink" href="#variable-object" title="Permalink to this headline">¶</a></h3>
+<p>COMBO defines a python class called <code class="xref py py-class docutils literal"><span class="pre">variable</span></code> to setup and handle the dataset in the training and testing. From a python script, variable object can be created like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;from combo.variable import variable</span>
+<span class="go">&gt;&gt;&gt;import numpy as np</span>
+<span class="go">&gt;&gt;&gt;X= np.array([[1,2,3,4], [5,6,7,8], [9,10,11,12]])</span>
+<span class="go">&gt;&gt;&gt;t=np.array([[1], [5], [9]])</span>
+<span class="go">&gt;&gt;&gt;Z=np.array([[2,6,3,4], [9,6,10,8], [22,10,11,12]])</span>
+<span class="go">&gt;&gt;&gt;vtest=variable(X,t,Z)</span>
+<span class="go">&gt;&gt;&gt;print vtest.X</span>
+</pre></div>
+</div>
+<dl class="class">
+<dt id="combo.variable.variable">
+<em class="property">class </em><code class="descclassname">combo.variable.</code><code class="descname">variable</code><a class="headerlink" href="#combo.variable.variable" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="combo.variable.variable.X">
+<code class="descname">X</code><a class="headerlink" href="#combo.variable.variable.X" title="Permalink to this definition">¶</a></dt>
+<dt id="combo.variable.variable.array_like">
+<code class="descname">array_like</code><a class="headerlink" href="#combo.variable.variable.array_like" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="combo.variable.variable.t">
+<code class="descname">t</code><a class="headerlink" href="#combo.variable.variable.t" title="Permalink to this definition">¶</a></dt>
+<dt>
+<code class="descname">array_like</code></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="combo.variable.variable.Z">
+<code class="descname">Z</code><a class="headerlink" href="#combo.variable.variable.Z" title="Permalink to this definition">¶</a></dt>
+<dt>
+<code class="descname">array_like</code></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.variable.variable.get_subset">
+<code class="descname">get_subset</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.variable.variable.get_subset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.variable.variable.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>num_row</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.variable.variable.delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.variable.variable.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>X</em>, <em>t</em>, <em>Z</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.variable.variable.add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.variable.variable.delete_X">
+<code class="descname">delete_X</code><span class="sig-paren">(</span><em>num_row</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.variable.variable.delete_X" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.variable.variable.delete_t">
+<code class="descname">delete_t</code><span class="sig-paren">(</span><em>num_row</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.variable.variable.delete_t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.variable.variable.delete_Z">
+<code class="descname">delete_Z</code><span class="sig-paren">(</span><em>num_row</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.variable.variable.delete_Z" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.variable.variable.add_X">
+<code class="descname">add_X</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.variable.variable.add_X" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.variable.variable.add_t">
+<code class="descname">add_t</code><span class="sig-paren">(</span><em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.variable.variable.add_t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.variable.variable.add_Z">
+<code class="descname">add_Z</code><span class="sig-paren">(</span><em>Z</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.variable.variable.add_Z" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.variable.variable.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.variable.variable.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.variable.variable.load">
+<code class="descname">load</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.variable.variable.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.predictor.base_predictor">
+<em class="property">class </em><code class="descclassname">combo.predictor.</code><code class="descname">base_predictor</code><a class="headerlink" href="#combo.predictor.base_predictor" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="combo.predictor.base_predictor.config">
+<code class="descname">config</code><a class="headerlink" href="#combo.predictor.base_predictor.config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="combo.predictor.base_predictor.model">
+<code class="descname">model</code><a class="headerlink" href="#combo.predictor.base_predictor.model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.predictor.base_predictor.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.predictor.base_predictor.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.predictor.base_predictor.prepare">
+<code class="descname">prepare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.predictor.base_predictor.prepare" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.predictor.base_predictor.delete_stats">
+<code class="descname">delete_stats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.predictor.base_predictor.delete_stats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.predictor.base_predictor.get_basis">
+<code class="descname">get_basis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.predictor.base_predictor.get_basis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.predictor.base_predictor.get_post_fmean">
+<code class="descname">get_post_fmean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.predictor.base_predictor.get_post_fmean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.predictor.base_predictor.get_post_fcov">
+<code class="descname">get_post_fcov</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.predictor.base_predictor.get_post_fcov" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.predictor.base_predictor.get_post_params">
+<code class="descname">get_post_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.predictor.base_predictor.get_post_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.predictor.base_predictor.get_post_samples">
+<code class="descname">get_post_samples</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.predictor.base_predictor.get_post_samples" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.misc.centering">
+<code class="descclassname">combo.misc.</code><code class="descname">centering</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.misc.centering" title="Permalink to this definition">¶</a></dt>
+<dd><p>standardize the data X and remove the columns with zero value</p>
+<div class="math">
+\[X_{1,1\sigma}=\frac{X_{i}-\bar{X}_S}{\sigma_{X,S}}\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>X</strong> &#8211; input data</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">return the standardized data for the columns with non-zero values</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.misc.gauss_elim">
+<code class="descclassname">combo.misc.</code><code class="descname">gauss_elim</code><span class="sig-paren">(</span><em>L</em>, <em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.misc.gauss_elim" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>L</strong> &#8211; </li>
+<li><strong>t</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">return</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.misc.set_config.set_config">
+<em class="property">class </em><code class="descclassname">combo.misc.set_config.</code><code class="descname">set_config</code><a class="headerlink" href="#combo.misc.set_config.set_config" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.misc.set_config.set_config.show">
+<code class="descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.misc.set_config.set_config.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.misc.set_config.set_config.load">
+<code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.misc.set_config.set_config.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.misc.set_config.search">
+<em class="property">class </em><code class="descclassname">combo.misc.set_config.</code><code class="descname">search</code><a class="headerlink" href="#combo.misc.set_config.search" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.misc.set_config.search.show">
+<code class="descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.misc.set_config.search.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.misc.set_config.search.load">
+<code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.misc.set_config.search.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.misc.set_config.learning">
+<em class="property">class </em><code class="descclassname">combo.misc.set_config.</code><code class="descname">learning</code><a class="headerlink" href="#combo.misc.set_config.learning" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.misc.set_config.learning.show">
+<code class="descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.misc.set_config.learning.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.misc.set_config.learning.load">
+<code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.misc.set_config.learning.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.misc.set_config.batch">
+<em class="property">class </em><code class="descclassname">combo.misc.set_config.</code><code class="descname">batch</code><a class="headerlink" href="#combo.misc.set_config.batch" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.misc.set_config.batch.show">
+<code class="descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.misc.set_config.batch.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.misc.set_config.batch.load">
+<code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.misc.set_config.batch.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.misc.set_config.online">
+<em class="property">class </em><code class="descclassname">combo.misc.set_config.</code><code class="descname">online</code><a class="headerlink" href="#combo.misc.set_config.online" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.misc.set_config.online.show">
+<code class="descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.misc.set_config.online.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.misc.set_config.online.load">
+<code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.misc.set_config.online.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.misc.set_config.adam">
+<em class="property">class </em><code class="descclassname">combo.misc.set_config.</code><code class="descname">adam</code><a class="headerlink" href="#combo.misc.set_config.adam" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.misc.set_config.adam.show">
+<code class="descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.misc.set_config.adam.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.misc.set_config.adam.load">
+<code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.misc.set_config.adam.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.misc.set_config.boolean">
+<code class="descclassname">combo.misc.set_config.</code><code class="descname">boolean</code><span class="sig-paren">(</span><em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.misc.set_config.boolean" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>str</strong> &#8211; </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">return a boolean value</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.search.utility.show_search_results">
+<code class="descclassname">combo.search.utility.</code><code class="descname">show_search_results</code><span class="sig-paren">(</span><em>history</em>, <em>N</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.utility.show_search_results" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>history</strong> &#8211; </li>
+<li><strong>N</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.search.utility.show_start_message_multi_search">
+<code class="descclassname">combo.search.utility.</code><code class="descname">show_start_message_multi_search</code><span class="sig-paren">(</span><em>N</em>, <em>score=None</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.utility.show_start_message_multi_search" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>N</strong> &#8211; </li>
+<li><strong>score</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.search.utility.show_interactive_mode">
+<code class="descclassname">combo.search.utility.</code><code class="descname">show_interactive_mode</code><span class="sig-paren">(</span><em>simulator</em>, <em>history</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.utility.show_interactive_mode" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>simulator</strong> &#8211; </li>
+<li><strong>history</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.search.utility.is_learning">
+<code class="descclassname">combo.search.utility.</code><code class="descname">is_learning</code><span class="sig-paren">(</span><em>n</em>, <em>interval</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.utility.is_learning" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>n</strong> &#8211; </li>
+<li><strong>interval</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.search.call_simulator">
+<code class="descclassname">combo.search.</code><code class="descname">call_simulator</code><span class="sig-paren">(</span><em>simu</em>, <em>action</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.call_simulator" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>simu</strong> &#8211; </li>
+<li><strong>action</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.search.score.EI">
+<code class="descclassname">combo.search.score.</code><code class="descname">EI</code><span class="sig-paren">(</span><em>predictor</em>, <em>training</em>, <em>test</em>, <em>fmax=None</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.score.EI" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>predictor</strong> &#8211; </li>
+<li><strong>training</strong> &#8211; </li>
+<li><strong>test</strong> &#8211; </li>
+<li><strong>fmax</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">return score</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.search.score.PI">
+<code class="descclassname">combo.search.score.</code><code class="descname">PI</code><span class="sig-paren">(</span><em>predictor</em>, <em>training</em>, <em>test</em>, <em>fmax=None</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.score.PI" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>predictor</strong> &#8211; </li>
+<li><strong>training</strong> &#8211; </li>
+<li><strong>test</strong> &#8211; </li>
+<li><strong>fmax</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">return score</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.search.score.TS">
+<code class="descclassname">combo.search.score.</code><code class="descname">TS</code><span class="sig-paren">(</span><em>predictor</em>, <em>training</em>, <em>test</em>, <em>alpha=1</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.score.TS" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>predictor</strong> &#8211; </li>
+<li><strong>training</strong> &#8211; </li>
+<li><strong>test</strong> &#8211; </li>
+<li><strong>alpha</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">return score</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.search.discrete.policy.policy">
+<em class="property">class </em><code class="descclassname">combo.search.discrete.policy.</code><code class="descname">policy</code><a class="headerlink" href="#combo.search.discrete.policy.policy" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.search.discrete.policy.policy.set_seed">
+<code class="descname">set_seed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy.set_seed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy.delete_actions">
+<code class="descname">delete_actions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy.delete_actions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy.write">
+<code class="descname">write</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy.write" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy.random_search">
+<code class="descname">random_search</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy.random_search" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy.bayes_search">
+<code class="descname">bayes_search</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy.bayes_search" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy.get_score">
+<code class="descname">get_score</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy.get_score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy.get_marginal_score">
+<code class="descname">get_marginal_score</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy.get_marginal_score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy.get_actions">
+<code class="descname">get_actions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy.get_actions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy.get_random_action">
+<code class="descname">get_random_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy.get_random_action" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy.load">
+<code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy.export_predictor">
+<code class="descname">export_predictor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy.export_predictor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy.export_training">
+<code class="descname">export_training</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy.export_training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy.export_history">
+<code class="descname">export_history</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy.export_history" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy._set_predictor">
+<code class="descname">_set_predictor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy._set_predictor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy._init_predictor">
+<code class="descname">_init_predictor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy._init_predictor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy._set_training">
+<code class="descname">_set_training</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy._set_training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy._set_unchosed_actions">
+<code class="descname">_set_unchosed_actions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy._set_unchosed_actions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy._set_test">
+<code class="descname">_set_test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy._set_test" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.policy.policy._set_config">
+<code class="descname">_set_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.policy.policy._set_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.search.discrete.results.history">
+<em class="property">class </em><code class="descclassname">combo.search.discrete.results.</code><code class="descname">history</code><a class="headerlink" href="#combo.search.discrete.results.history" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.search.discrete.results.history.write">
+<code class="descname">write</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.results.history.write" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.results.history.export_sequence_best_fx">
+<code class="descname">export_sequence_best_fx</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.results.history.export_sequence_best_fx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.results.history.export_all_sequence_best_fx">
+<code class="descname">export_all_sequence_best_fx</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.results.history.export_all_sequence_best_fx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.results.history.save">
+<code class="descname">save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.results.history.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.search.discrete.results.history.load">
+<code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.search.discrete.results.history.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.opt.adam">
+<em class="property">class </em><code class="descclassname">combo.opt.</code><code class="descname">adam</code><a class="headerlink" href="#combo.opt.adam" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.opt.adam.set_params">
+<code class="descname">set_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.opt.adam.set_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.opt.adam.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.opt.adam.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.opt.adam.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.opt.adam.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.opt.adam._set_options">
+<code class="descname">_set_options</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.opt.adam._set_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.gp.predictor.predictor">
+<em class="property">class </em><code class="descclassname">combo.gp.predictor.</code><code class="descname">predictor</code><a class="headerlink" href="#combo.gp.predictor.predictor" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.gp.predictor.predictor.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.predictor.predictor.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.predictor.predictor.get_basis">
+<code class="descname">get_basis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.predictor.predictor.get_basis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.predictor.predictor.get_post_params">
+<code class="descname">get_post_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.predictor.predictor.get_post_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.predictor.predictor.prepare">
+<code class="descname">prepare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.predictor.predictor.prepare" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.predictor.predictor.delete_stats">
+<code class="descname">delete_stats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.predictor.predictor.delete_stats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.predictor.predictor.get_post_fmean">
+<code class="descname">get_post_fmean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.predictor.predictor.get_post_fmean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.predictor.predictor.get_post_fcov">
+<code class="descname">get_post_fcov</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.predictor.predictor.get_post_fcov" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.predictor.predictor.get_post_samples">
+<code class="descname">get_post_samples</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.predictor.predictor.get_post_samples" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.predictor.predictor.get_predict_samples">
+<code class="descname">get_predict_samples</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.predictor.predictor.get_predict_samples" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.gp.core.learning.batch">
+<em class="property">class </em><code class="descclassname">combo.gp.core.learning.</code><code class="descname">batch</code><a class="headerlink" href="#combo.gp.core.learning.batch" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.gp.core.learning.batch.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.learning.batch.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.learning.batch.one_run">
+<code class="descname">one_run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.learning.batch.one_run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.learning.batch.init_params_search">
+<code class="descname">init_params_search</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.learning.batch.init_params_search" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.gp.core.learning.online">
+<em class="property">class </em><code class="descclassname">combo.gp.core.learning.</code><code class="descname">online</code><a class="headerlink" href="#combo.gp.core.learning.online" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.gp.core.learning.online.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.learning.online.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.learning.online.one_run">
+<code class="descname">one_run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.learning.online.one_run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.learning.online.disp_marlik">
+<code class="descname">disp_marlik</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.learning.online.disp_marlik" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.learning.online.init_params_search">
+<code class="descname">init_params_search</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.learning.online.init_params_search" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.learning.online.get_one_update">
+<code class="descname">get_one_update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.learning.online.get_one_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.gp.core.learning.adam">
+<em class="property">class </em><code class="descclassname">combo.gp.core.learning.</code><code class="descname">adam</code><a class="headerlink" href="#combo.gp.core.learning.adam" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.gp.core.learning.adam.rest">
+<code class="descname">rest</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.learning.adam.rest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.learning.adam.get_one_update">
+<code class="descname">get_one_update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.learning.adam.get_one_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.gp.core.model.model">
+<em class="property">class </em><code class="descclassname">combo.gp.core.model.</code><code class="descname">model</code><a class="headerlink" href="#combo.gp.core.model.model" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.gp.core.model.model.cat_params">
+<code class="descname">cat_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.cat_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.model.model.decomp_params">
+<code class="descname">decomp_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.decomp_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.model.model.set_params">
+<code class="descname">set_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.set_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.model.model.sub_sampling">
+<code class="descname">sub_sampling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.sub_sampling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.model.model.export_blm">
+<code class="descname">export_blm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.export_blm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.model.model.eval_marlik">
+<code class="descname">eval_marlik</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.eval_marlik" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.model.model.get_grad_marlik">
+<code class="descname">get_grad_marlik</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.get_grad_marlik" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.model.model.get_params_bound">
+<code class="descname">get_params_bound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.get_params_bound" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.model.model.prepare">
+<code class="descname">prepare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.prepare" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.model.model.get_post_fmean">
+<code class="descname">get_post_fmean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.get_post_fmean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.model.model.get_post_fcov">
+<code class="descname">get_post_fcov</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.get_post_fcov" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.model.model.post_sampling">
+<code class="descname">post_sampling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.post_sampling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.model.model.predict_sampling">
+<code class="descname">predict_sampling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.predict_sampling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.model.model.print_params">
+<code class="descname">print_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.print_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.model.model.get_cand_params">
+<code class="descname">get_cand_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.get_cand_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.model.model.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.model.model.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.gp.core.prior">
+<em class="property">class </em><code class="descclassname">combo.gp.core.</code><code class="descname">prior</code><a class="headerlink" href="#combo.gp.core.prior" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.gp.core.prior.cat_params">
+<code class="descname">cat_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.prior.cat_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.prior.decomp_params">
+<code class="descname">decomp_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.prior.decomp_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.prior.get_mean">
+<code class="descname">get_mean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.prior.get_mean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.prior.get_cov">
+<code class="descname">get_cov</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.prior.get_cov" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.prior.get_grad_mean">
+<code class="descname">get_grad_mean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.prior.get_grad_mean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.prior.get_grad_cov">
+<code class="descname">get_grad_cov</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.prior.get_grad_cov" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.prior.set_params">
+<code class="descname">set_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.prior.set_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.prior.set_mean_params">
+<code class="descname">set_mean_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.prior.set_mean_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.prior.set_cov_params">
+<code class="descname">set_cov_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.prior.set_cov_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.core.prior.sampling">
+<code class="descname">sampling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.core.prior.sampling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.gp.cov.gauss.gauss">
+<em class="property">class </em><code class="descclassname">combo.gp.cov.gauss.</code><code class="descname">gauss</code><a class="headerlink" href="#combo.gp.cov.gauss.gauss" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.gp.cov.gauss.gauss.cat_params">
+<code class="descname">cat_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.cov.gauss.gauss.cat_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.cov.gauss.gauss.print_params">
+<code class="descname">print_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.cov.gauss.gauss.print_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.cov.gauss.gauss.prepare">
+<code class="descname">prepare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.cov.gauss.gauss.prepare" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.cov.gauss.gauss.get_grad">
+<code class="descname">get_grad</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.cov.gauss.gauss.get_grad" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.cov.gauss.gauss.get_cov">
+<code class="descname">get_cov</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.cov.gauss.gauss.get_cov" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.cov.gauss.gauss.set_params">
+<code class="descname">set_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.cov.gauss.gauss.set_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.cov.gauss.gauss.supp_params">
+<code class="descname">supp_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.cov.gauss.gauss.supp_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.cov.gauss.gauss.decomp_params">
+<code class="descname">decomp_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.cov.gauss.gauss.decomp_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.cov.gauss.gauss.save">
+<code class="descname">save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.cov.gauss.gauss.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.cov.gauss.gauss.load">
+<code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.cov.gauss.gauss.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.cov.gauss.gauss.get_params_bound">
+<code class="descname">get_params_bound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.cov.gauss.gauss.get_params_bound" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">cat_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.cov.gauss.gauss.rand_expans">
+<code class="descname">rand_expans</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.cov.gauss.gauss.rand_expans" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.cov.gauss.gauss.get_cand_params">
+<code class="descname">get_cand_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.cov.gauss.gauss.get_cand_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.gp.inf.exact.eval_marlik">
+<code class="descclassname">combo.gp.inf.exact.</code><code class="descname">eval_marlik</code><span class="sig-paren">(</span><em>gp</em>, <em>X</em>, <em>t</em>, <em>params = None</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.inf.exact.eval_marlik" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>gp</strong> &#8211; </li>
+<li><strong>X</strong> &#8211; </li>
+<li><strong>t</strong> &#8211; </li>
+<li><strong>params</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">return  marlik</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.gp.inf.exact.get_grad_marlik">
+<code class="descclassname">combo.gp.inf.exact.</code><code class="descname">get_grad_marlik</code><span class="sig-paren">(</span><em>gp</em>, <em>X</em>, <em>t</em>, <em>params = None</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.inf.exact.get_grad_marlik" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>gp</strong> &#8211; </li>
+<li><strong>X</strong> &#8211; </li>
+<li><strong>t</strong> &#8211; </li>
+<li><strong>params</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">return grad_marlik</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.gp.inf.exact.prepare">
+<code class="descclassname">combo.gp.inf.exact.</code><code class="descname">prepare</code><span class="sig-paren">(</span><em>gp</em>, <em>X</em>, <em>t</em>, <em>params = None</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.inf.exact.prepare" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>gp</strong> &#8211; </li>
+<li><strong>X</strong> &#8211; </li>
+<li><strong>t</strong> &#8211; </li>
+<li><strong>params</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">return stats</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.gp.inf.get_post_fmean">
+<code class="descclassname">combo.gp.inf.</code><code class="descname">get_post_fmean</code><span class="sig-paren">(</span><em>gp</em>, <em>X</em>, <em>t</em>, <em>params = None</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.inf.get_post_fmean" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>gp</strong> &#8211; </li>
+<li><strong>X</strong> &#8211; </li>
+<li><strong>t</strong> &#8211; </li>
+<li><strong>params</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">return G.dot(alpha) + fmu</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.gp.inf.get_post_fcov">
+<code class="descclassname">combo.gp.inf.</code><code class="descname">get_post_fcov</code><span class="sig-paren">(</span><em>gp</em>, <em>X</em>, <em>t</em>, <em>params = None</em>, <em>diag = True</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.inf.get_post_fcov" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>gp</strong> &#8211; </li>
+<li><strong>X</strong> &#8211; </li>
+<li><strong>t</strong> &#8211; </li>
+<li><strong>params</strong> &#8211; </li>
+<li><strong>diag</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">post_cov</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.gp.lik.gauss.gauss">
+<em class="property">class </em><code class="descclassname">combo.gp.lik.gauss.</code><code class="descname">gauss</code><a class="headerlink" href="#combo.gp.lik.gauss.gauss" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.gp.lik.gauss.gauss.supp_params">
+<code class="descname">supp_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.lik.gauss.gauss.supp_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.lik.gauss.gauss.trans_params">
+<code class="descname">trans_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.lik.gauss.gauss.trans_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.lik.gauss.gauss.get_params_bound">
+<code class="descname">get_params_bound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.lik.gauss.gauss.get_params_bound" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.lik.gauss.gauss.get_cov">
+<code class="descname">get_cov</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.lik.gauss.gauss.get_cov" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.lik.gauss.gauss.get_grad">
+<code class="descname">get_grad</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.lik.gauss.gauss.get_grad" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.lik.gauss.gauss.set_params">
+<code class="descname">set_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.lik.gauss.gauss.set_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.lik.gauss.gauss.get_cand_params">
+<code class="descname">get_cand_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.lik.gauss.gauss.get_cand_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.lik.gauss.gauss.sampling">
+<code class="descname">sampling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.lik.gauss.gauss.sampling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.gp.mean.const.const">
+<em class="property">class </em><code class="descclassname">combo.gp.mean.const.</code><code class="descname">const</code><a class="headerlink" href="#combo.gp.mean.const.const" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.gp.mean.const.const.supp_params">
+<code class="descname">supp_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.mean.const.const.supp_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.mean.const.const.get_params_bound">
+<code class="descname">get_params_bound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.mean.const.const.get_params_bound" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.mean.const.const.get_mean">
+<code class="descname">get_mean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.mean.const.const.get_mean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.mean.const.const.get_grad">
+<code class="descname">get_grad</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.mean.const.const.get_grad" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.mean.const.const.set_params">
+<code class="descname">set_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.mean.const.const.set_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.mean.const.const.init_params">
+<code class="descname">init_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.mean.const.const.init_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.gp.mean.const.const.get_cand_params">
+<code class="descname">get_cand_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.gp.mean.const.const.get_cand_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.blm.predictor.predictor">
+<em class="property">class </em><code class="descclassname">combo.blm.predictor.</code><code class="descname">predictor</code><a class="headerlink" href="#combo.blm.predictor.predictor" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.blm.predictor.predictor.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.predictor.predictor.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.predictor.predictor.prepare">
+<code class="descname">prepare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.predictor.predictor.prepare" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.predictor.predictor.delete_stats">
+<code class="descname">delete_stats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.predictor.predictor.delete_stats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.predictor.predictor.get_basis">
+<code class="descname">get_basis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.predictor.predictor.get_basis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.predictor.predictor.get_post_fmean">
+<code class="descname">get_post_fmean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.predictor.predictor.get_post_fmean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.predictor.predictor.get_post_fcov">
+<code class="descname">get_post_fcov</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.predictor.predictor.get_post_fcov" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.predictor.predictor.get_post_params">
+<code class="descname">get_post_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.predictor.predictor.get_post_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.predictor.predictor.get_post_samples">
+<code class="descname">get_post_samples</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.predictor.predictor.get_post_samples" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.predictor.predictor.get_predict_samples">
+<code class="descname">get_predict_samples</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.predictor.predictor.get_predict_samples" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.predictor.predictor.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.predictor.predictor.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.blm.basis.fourier">
+<em class="property">class </em><code class="descclassname">combo.blm.basis.</code><code class="descname">fourier</code><a class="headerlink" href="#combo.blm.basis.fourier" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.blm.basis.fourier.get_basis">
+<code class="descname">get_basis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.basis.fourier.get_basis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.basis.fourier.set_params">
+<code class="descname">set_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.basis.fourier.set_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.basis.fourier.show">
+<code class="descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.basis.fourier.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.basis.fourier._check_params">
+<code class="descname">_check_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.basis.fourier._check_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.basis.fourier._check_len_params">
+<code class="descname">_check_len_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.basis.fourier._check_len_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.blm.core.model.model">
+<em class="property">class </em><code class="descclassname">combo.blm.core.model.</code><code class="descname">model</code><a class="headerlink" href="#combo.blm.core.model.model" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.blm.core.model.model.prepare">
+<code class="descname">prepare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.core.model.model.prepare" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.core.model.model.update_stats">
+<code class="descname">update_stats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.core.model.model.update_stats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.core.model.model.get_post_params_mean">
+<code class="descname">get_post_params_mean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.core.model.model.get_post_params_mean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.core.model.model.get_post_fmean">
+<code class="descname">get_post_fmean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.core.model.model.get_post_fmean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.core.model.model.sampling">
+<code class="descname">sampling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.core.model.model.sampling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.core.model.model.post_sampling">
+<code class="descname">post_sampling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.core.model.model.post_sampling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.core.model.model.predict_sampling">
+<code class="descname">predict_sampling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.core.model.model.predict_sampling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.core.model.model.get_post_fcov">
+<code class="descname">get_post_fcov</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.core.model.model.get_post_fcov" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.core.model.model._set_options">
+<code class="descname">_set_options</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.core.model.model._set_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.core.model.model._init_prior">
+<code class="descname">_init_prior</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.core.model.model._init_prior" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.blm.inf.exact.prepare">
+<code class="descclassname">combo.blm.inf.exact.</code><code class="descname">prepare</code><span class="sig-paren">(</span><em>blm</em>, <em>X</em>, <em>t</em>, <em>Psi = None</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.inf.exact.prepare" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>blm</strong> &#8211; </li>
+<li><strong>X</strong> &#8211; </li>
+<li><strong>t</strong> &#8211; </li>
+<li><strong>Psi</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.blm.inf.exact.update_stats">
+<code class="descclassname">combo.blm.inf.exact.</code><code class="descname">update_stats</code><span class="sig-paren">(</span><em>blm</em>, <em>x</em>, <em>t</em>, <em>Psi = None</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.inf.exact.update_stats" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>blm</strong> &#8211; </li>
+<li><strong>x</strong> &#8211; </li>
+<li><strong>t</strong> &#8211; </li>
+<li><strong>Psi</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">return ( L, b, alpha )</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.blm.inf.exact.sampling">
+<code class="descclassname">combo.blm.inf.exact.</code><code class="descname">sampling</code><span class="sig-paren">(</span><em>blm</em>, <em>w_mu = None</em>, <em>N=1</em>, <em>alpha = 1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.inf.exact.sampling" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>blm</strong> &#8211; </li>
+<li><strong>w_mu</strong> &#8211; </li>
+<li><strong>N</strong> &#8211; </li>
+<li><strong>alpha</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">return (invLz.transpose() + w_mu).transpose()</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.blm.inf.exact.get_post_params_mean">
+<code class="descclassname">combo.blm.inf.exact.</code><code class="descname">get_post_params_mean</code><span class="sig-paren">(</span><em>blm</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.inf.exact.get_post_params_mean" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>blm</strong> &#8211; </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">return blm.stats[2] * blm.lik.cov.prec</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.blm.inf.exact.get_post_fmean">
+<code class="descclassname">combo.blm.inf.exact.</code><code class="descname">get_post_fmean</code><span class="sig-paren">(</span><em>blm</em>, <em>X</em>, <em>Psi = None</em>, <em>w = None</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.inf.exact.get_post_fmean" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>blm</strong> &#8211; </li>
+<li><strong>X</strong> &#8211; </li>
+<li><strong>Psi</strong> &#8211; </li>
+<li><strong>w</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">return Psi.dot(w) + blm.lik.linear.bias</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="combo.blm.inf.exact.get_post_fcov">
+<code class="descclassname">combo.blm.inf.exact.</code><code class="descname">get_post_fcov</code><span class="sig-paren">(</span><em>blm</em>, <em>X</em>, <em>Psi = None</em>, <em>diag = True</em><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.inf.exact.get_post_fcov" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>blm</strong> &#8211; </li>
+<li><strong>X</strong> &#8211; </li>
+<li><strong>Psi</strong> &#8211; </li>
+<li><strong>diag</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">return fcov</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.blm.lik.gauss.gauss">
+<em class="property">class </em><code class="descclassname">combo.blm.lik.gauss.</code><code class="descname">gauss</code><a class="headerlink" href="#combo.blm.lik.gauss.gauss" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.blm.lik.gauss.gauss.get_cov">
+<code class="descname">get_cov</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.lik.gauss.gauss.get_cov" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.lik.gauss.gauss.get_prec">
+<code class="descname">get_prec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.lik.gauss.gauss.get_prec" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.lik.gauss.gauss.get_basis">
+<code class="descname">get_basis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.lik.gauss.gauss.get_basis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.lik.gauss.gauss.get_mean">
+<code class="descname">get_mean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.lik.gauss.gauss.get_mean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.lik.gauss.gauss.set_params">
+<code class="descname">set_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.lik.gauss.gauss.set_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.lik.gauss.gauss.set_bias">
+<code class="descname">set_bias</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.lik.gauss.gauss.set_bias" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.lik.gauss.gauss.sampling">
+<code class="descname">sampling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.lik.gauss.gauss.sampling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.blm.lik.linear.linear">
+<em class="property">class </em><code class="descclassname">combo.blm.lik.linear.</code><code class="descname">linear</code><a class="headerlink" href="#combo.blm.lik.linear.linear" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.blm.lik.linear.linear.get_mean">
+<code class="descname">get_mean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.lik.linear.linear.get_mean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.lik.linear.linear.set_params">
+<code class="descname">set_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.lik.linear.linear.set_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.lik.linear.linear.set_bias">
+<code class="descname">set_bias</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.lik.linear.linear.set_bias" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.lik.linear.linear._init_params">
+<code class="descname">_init_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.lik.linear.linear._init_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.lik.linear.linear._init_bias">
+<code class="descname">_init_bias</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.lik.linear.linear._init_bias" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.blm.prior.gauss.cov_const">
+<em class="property">class </em><code class="descclassname">combo.blm.prior.gauss.</code><code class="descname">cov_const</code><a class="headerlink" href="#combo.blm.prior.gauss.cov_const" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.blm.prior.gauss.cov_const.get_cov">
+<code class="descname">get_cov</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.prior.gauss.cov_const.get_cov" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.prior.gauss.cov_const.get_prec">
+<code class="descname">get_prec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.prior.gauss.cov_const.get_prec" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.prior.gauss.cov_const.set_params">
+<code class="descname">set_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.prior.gauss.cov_const.set_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.prior.gauss.cov_const._trans_params">
+<code class="descname">_trans_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.prior.gauss.cov_const._trans_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="combo.blm.prior.gauss.gauss">
+<em class="property">class </em><code class="descclassname">combo.blm.prior.gauss.</code><code class="descname">gauss</code><a class="headerlink" href="#combo.blm.prior.gauss.gauss" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="combo.blm.prior.gauss.gauss.get_mean">
+<code class="descname">get_mean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.prior.gauss.gauss.get_mean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.prior.gauss.gauss.get_cov">
+<code class="descname">get_cov</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.prior.gauss.gauss.get_cov" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.prior.gauss.gauss.get_prec">
+<code class="descname">get_prec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.prior.gauss.gauss.get_prec" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.prior.gauss.gauss.set_params">
+<code class="descname">set_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.prior.gauss.gauss.set_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="combo.blm.prior.gauss.gauss._init_cov">
+<code class="descname">_init_cov</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#combo.blm.prior.gauss.gauss._init_cov" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 </div>
